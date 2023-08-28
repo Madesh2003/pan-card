@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .header{
+            display: inline-block;
+            background-color: brown;
+            text-align: center;
+            color:white;
+            width: 100%;
+            position: relative;
+         }
+         a:link{
+            color:orange;
+         }
+         .bodysection{
+            position: absolute;
+            background-color: lightgoldenrodyellow;
+            height: fit-content;
+            width: 99%;
+         }
+         .f{
+            border: 1px solid black;
+         }
+         .names, .input, .fathername, .input2, .mothername, .input3{
+            display: flex;
+            justify-content: space-between;
+         }
+         .fname, .mname, .fatherfname, .fathermname, .motherfname, .mothermname{
+            margin-right: 60px;
+         }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p><b>Request For New PAN Card Changes Or Correction In PAN Data</b></p>
+        <p><i>Fields marked with<font color="red">*</font>(asterisk) are mandatory. <font color="black">.</font> To avoid mistake(s), please refer <a href="#">guidelines</a> and <a href="#">instructions</a></i></p>
+    </div>
+    <div class="bodysection">
+         <form class="f">
+            <fieldset>
+               <font color="red">*</font> <label for="citizen"><b> Whether citizen of India</b></label>
+               <input type="radio" name="citizen" value="yes">Yes
+               <input type="radio" name="citizen" value="no">No<br><hr>
+               <font color="red">*</font><label for="pan"><b> Permanent Account Number(PAN)</b></label>
+               <input type="text" name="pan"><br><hr>
+               <font color="red">*</font><label for="name"><b> 1. Name</b></label><br><hr>
+               <label><b>Title</b></label>&nbsp; &nbsp;
+               Shri/Mr<input type="radio" name="name" value="Shri/Mr">&nbsp;&nbsp;
+               Smt./Mrs.<input type="radio" name="name" value="Smt./Mrs.">&nbsp;&nbsp;
+               Kumari/Ms <input type="radio" name="name" value="Kumari/Ms">&nbsp;&nbsp;
+               <label style="opacity: 0.5;">M/s</label><hr>
+               <div class="names">
+               <label for="lname"><b>Last Name/Surename</b></label><br>
+               <label for="fname" class="fname"><b>First Name</b></label><br>
+               <label for="mname" class="mname"><b>Middle Name</b></label><br>
+               </div>
+               <div class="input">
+               <input type="text" name="lname"><br>
+               <input type="text" name="fname"><br>
+               <input type="text" name="mname"><br>
+               </div><hr>
+               <font color="red">*</font><labe for="card"><b> Name as you would like it printed on the card</b><font color="blue"> (prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Allas etc. are not allowed)</font></label><br>
+               <input type="text" name="card" size="40"><br><hr>
+               <label><b> Details of Parents.</b><font color="blue"> (prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Allas etc. are not allowed)</font></label><br><hr>
+               <label for="singleparent" class="sp"><b>Whether mother is single parent and you wish to apply for PAN by furnishing the name of your mother only</b></label>&nbsp;&nbsp;
+               Yes<input type="radio" name="singleparent" value="yes">
+               No<input type="radio" name="singleparent" value="no"><hr>
+               <font color="red">*</font><label for="card"><b>Father's Name</b><font color="blue">(Mandatory field. Even married women should give father's name only.)</font></label><br><hr>
+               <div class="fathername">
+               <label for="fatherlname"><b>Last Name/Surename</b></label><br>
+               <label for="fatherfname" class="fatherfname"><b>First Name</b></label><br>
+               <label for="fathermname" class="fathermname"><b>Middle Name</b></label><br>
+               </div>
+               <div class="input2">
+               <input type="text" name="fatherlname"><br>
+               <input type="text" name="fatherfname"><br>
+               <input type="text" name="fathermname"><br>
+               </div><hr>
+               <font color="blue">Mother's Name(This field is optional.)</font><br><hr>
+               <div class="mothername">
+               <label for="motherlname"><b>Last Name/Surename</b></label><br>
+               <label for="motherfname" class="motherfname"><b>First Name</b></label><br>
+               <label for="mothermname" class="mothermname"><b>Middle Name</b></label><br>
+               </div>
+               <div class="input3">
+               <input type="text" name="motherlname"><br>
+               <input type="text" name="motherfname"><br>
+               <input type="text" name="mothermname"><br>
+               </div><hr>
+               <span>
+               <font color="red">*</font><label for="parentnamepan"><b>4. Select Parent name which is to be printed on the card </b></label><br>
+               <font color="blue">(In case no option is provided then PAN card wil be issued with father's name)</font>
+               </span>
+               <span class="ab">
+               Father Name<input type="radio" name="parentnamepan" value="fathername">
+               Mother Name<input type="radio" name="parentnamepan" value="mothername"><br>
+               </span><hr>
+               <font color="red">*</font><label for="dob"><b>5. Date of Birth/Incorporation/Agreement/Partnership<br>or Trust Deed/Formation of Body of Individuals/<br>Association of Persons</b></label>
+               <input type="date"><br><hr>
+               <font color="red">*</font><label for="gender"><b>6. Gender</b></label>    
+               Male<input type="radio" name="gender" value="male">     
+               Female<input type="radio" name="gender" value="female">
+               TransGender<input type="radio" name="gender" value="transgender"><br><hr>
+               <label for=""><b>7. Photo Mismatch</b></label><br><hr>
+               <label for=""><b>8. Signature Mismatch</b></label>
+            </fieldset>
+         </form>
+    </div>
+</body>
+</html>
